@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SpaceX_VanillaApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      AppView()
+        .environmentObject(AppState())
     }
+  }
 }

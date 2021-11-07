@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F6D38CB32736C643009DD72A /* SpaceX_VanillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CB22736C643009DD72A /* SpaceX_VanillaApp.swift */; };
-		F6D38CB52736C643009DD72A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CB42736C643009DD72A /* ContentView.swift */; };
+		F6D38CB52736C643009DD72A /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CB42736C643009DD72A /* AppView.swift */; };
 		F6D38CB72736C646009DD72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D38CB62736C646009DD72A /* Assets.xcassets */; };
 		F6D38CBA2736C646009DD72A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D38CB92736C646009DD72A /* Preview Assets.xcassets */; };
 		F6D38CC42736C647009DD72A /* SpaceX_VanillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CC32736C647009DD72A /* SpaceX_VanillaTests.swift */; };
 		F6D38CCE2736C647009DD72A /* SpaceX_VanillaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CCD2736C647009DD72A /* SpaceX_VanillaUITests.swift */; };
 		F6D38CD02736C647009DD72A /* SpaceX_VanillaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CCF2736C647009DD72A /* SpaceX_VanillaUITestsLaunchTests.swift */; };
+		F6D38CDE2736CFEE009DD72A /* SpaceXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CDD2736CFEE009DD72A /* SpaceXClient.swift */; };
+		F6D38CE12736D052009DD72A /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE02736D052009DD72A /* Rocket.swift */; };
+		F6D38CE32736D06F009DD72A /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE22736D06F009DD72A /* Launch.swift */; };
+		F6D38CE52736D0D1009DD72A /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE42736D0D1009DD72A /* Company.swift */; };
+		F6D38CE82736D244009DD72A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE72736D244009DD72A /* AppState.swift */; };
+		F6D38CEB2736D6F2009DD72A /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CEA2736D6F2009DD72A /* CompanyViewModel.swift */; };
+		F6D38CEE2736E34E009DD72A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CED2736E34E009DD72A /* MainView.swift */; };
+		F6D38CF02736EC02009DD72A /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CEF2736EC02009DD72A /* LaunchesView.swift */; };
+		F6D38CF22736FD4A009DD72A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CF12736FD4A009DD72A /* MainViewModel.swift */; };
+		F6D38CF7273708E5009DD72A /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CF6273708E5009DD72A /* Sequence.swift */; };
+		F6D38CF9273708F4009DD72A /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CF8273708F4009DD72A /* Calendar.swift */; };
+		F6D38CFB27370E36009DD72A /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CFA27370E36009DD72A /* LaunchViewModel.swift */; };
+		F6D38CFD273711BF009DD72A /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CFC273711BF009DD72A /* ImageClient.swift */; };
+		F6D38D0127371CF5009DD72A /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38D0027371CF5009DD72A /* RemoteImage.swift */; };
+		F6D38D032737212F009DD72A /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38D022737212F009DD72A /* Navigation.swift */; };
+		F6D38D06273725BC009DD72A /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = F6D38D05273725BC009DD72A /* CasePaths */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +52,7 @@
 /* Begin PBXFileReference section */
 		F6D38CAF2736C643009DD72A /* SpaceX-Vanilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Vanilla.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D38CB22736C643009DD72A /* SpaceX_VanillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_VanillaApp.swift; sourceTree = "<group>"; };
-		F6D38CB42736C643009DD72A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F6D38CB42736C643009DD72A /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		F6D38CB62736C646009DD72A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6D38CB92736C646009DD72A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F6D38CBF2736C646009DD72A /* SpaceX-VanillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpaceX-VanillaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +60,21 @@
 		F6D38CC92736C647009DD72A /* SpaceX-VanillaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpaceX-VanillaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D38CCD2736C647009DD72A /* SpaceX_VanillaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_VanillaUITests.swift; sourceTree = "<group>"; };
 		F6D38CCF2736C647009DD72A /* SpaceX_VanillaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_VanillaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6D38CDD2736CFEE009DD72A /* SpaceXClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXClient.swift; sourceTree = "<group>"; };
+		F6D38CE02736D052009DD72A /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		F6D38CE22736D06F009DD72A /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		F6D38CE42736D0D1009DD72A /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		F6D38CE72736D244009DD72A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F6D38CEA2736D6F2009DD72A /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
+		F6D38CED2736E34E009DD72A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F6D38CEF2736EC02009DD72A /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
+		F6D38CF12736FD4A009DD72A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F6D38CF6273708E5009DD72A /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		F6D38CF8273708F4009DD72A /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		F6D38CFA27370E36009DD72A /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		F6D38CFC273711BF009DD72A /* ImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
+		F6D38D0027371CF5009DD72A /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		F6D38D022737212F009DD72A /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D38D06273725BC009DD72A /* CasePaths in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +126,13 @@
 		F6D38CB12736C643009DD72A /* SpaceX-Vanilla */ = {
 			isa = PBXGroup;
 			children = (
+				F6D38CF5273708DA009DD72A /* Extensions */,
+				F6D38CEC2736D7D2009DD72A /* Views */,
+				F6D38CE92736D6E4009DD72A /* ViewModels */,
+				F6D38CE62736D236009DD72A /* State */,
+				F6D38CDF2736D04A009DD72A /* Models */,
+				F6D38CDC2736CFB9009DD72A /* Services */,
 				F6D38CB22736C643009DD72A /* SpaceX_VanillaApp.swift */,
-				F6D38CB42736C643009DD72A /* ContentView.swift */,
 				F6D38CB62736C646009DD72A /* Assets.xcassets */,
 				F6D38CB82736C646009DD72A /* Preview Content */,
 			);
@@ -127,6 +164,64 @@
 			path = "SpaceX-VanillaUITests";
 			sourceTree = "<group>";
 		};
+		F6D38CDC2736CFB9009DD72A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CDD2736CFEE009DD72A /* SpaceXClient.swift */,
+				F6D38CFC273711BF009DD72A /* ImageClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6D38CDF2736D04A009DD72A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CE02736D052009DD72A /* Rocket.swift */,
+				F6D38CE22736D06F009DD72A /* Launch.swift */,
+				F6D38CE42736D0D1009DD72A /* Company.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6D38CE62736D236009DD72A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CE72736D244009DD72A /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		F6D38CE92736D6E4009DD72A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CEA2736D6F2009DD72A /* CompanyViewModel.swift */,
+				F6D38CF12736FD4A009DD72A /* MainViewModel.swift */,
+				F6D38CFA27370E36009DD72A /* LaunchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F6D38CEC2736D7D2009DD72A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CB42736C643009DD72A /* AppView.swift */,
+				F6D38CED2736E34E009DD72A /* MainView.swift */,
+				F6D38CEF2736EC02009DD72A /* LaunchesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6D38CF5273708DA009DD72A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CF6273708E5009DD72A /* Sequence.swift */,
+				F6D38CF8273708F4009DD72A /* Calendar.swift */,
+				F6D38D0027371CF5009DD72A /* RemoteImage.swift */,
+				F6D38D022737212F009DD72A /* Navigation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +238,9 @@
 			dependencies = (
 			);
 			name = "SpaceX-Vanilla";
+			packageProductDependencies = (
+				F6D38D05273725BC009DD72A /* CasePaths */,
+			);
 			productName = "SpaceX-Vanilla";
 			productReference = F6D38CAF2736C643009DD72A /* SpaceX-Vanilla.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +313,9 @@
 				Base,
 			);
 			mainGroup = F6D38CA62736C643009DD72A;
+			packageReferences = (
+				F6D38D04273725BC009DD72A /* XCRemoteSwiftPackageReference "swift-case-paths" */,
+			);
 			productRefGroup = F6D38CB02736C643009DD72A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +358,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D38CB52736C643009DD72A /* ContentView.swift in Sources */,
+				F6D38CB52736C643009DD72A /* AppView.swift in Sources */,
+				F6D38CEE2736E34E009DD72A /* MainView.swift in Sources */,
+				F6D38CF7273708E5009DD72A /* Sequence.swift in Sources */,
+				F6D38CFD273711BF009DD72A /* ImageClient.swift in Sources */,
+				F6D38CDE2736CFEE009DD72A /* SpaceXClient.swift in Sources */,
+				F6D38CF02736EC02009DD72A /* LaunchesView.swift in Sources */,
+				F6D38CE82736D244009DD72A /* AppState.swift in Sources */,
 				F6D38CB32736C643009DD72A /* SpaceX_VanillaApp.swift in Sources */,
+				F6D38D032737212F009DD72A /* Navigation.swift in Sources */,
+				F6D38CEB2736D6F2009DD72A /* CompanyViewModel.swift in Sources */,
+				F6D38CE32736D06F009DD72A /* Launch.swift in Sources */,
+				F6D38CFB27370E36009DD72A /* LaunchViewModel.swift in Sources */,
+				F6D38D0127371CF5009DD72A /* RemoteImage.swift in Sources */,
+				F6D38CF9273708F4009DD72A /* Calendar.swift in Sources */,
+				F6D38CE12736D052009DD72A /* Rocket.swift in Sources */,
+				F6D38CE52736D0D1009DD72A /* Company.swift in Sources */,
+				F6D38CF22736FD4A009DD72A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +721,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6D38D04273725BC009DD72A /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-case-paths.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6D38D05273725BC009DD72A /* CasePaths */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6D38D04273725BC009DD72A /* XCRemoteSwiftPackageReference "swift-case-paths" */;
+			productName = CasePaths;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6D38CA72736C643009DD72A /* Project object */;
 }
