@@ -53,7 +53,7 @@ struct MainView: View {
         NavigationLink(
           unwrap: $appState.route,
           case: /AppState.Route.filter,
-          onNavigate: { appState.route = $0 ? .filter : nil },
+          onNavigate: appState.setFilterNavigation(isActive:),
           destination: { _ in Text("Filter") },
           label: {
             Image(systemName: "line.horizontal.3.decrease.circle")
@@ -92,9 +92,20 @@ struct HeaderView: View {
 
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    NavigationView {
+    let appState = AppState()
+    appState.route = .launchActionSheet(
+      launch: Launch(
+        id: "blah",
+        missionName: "blha",
+        launchDate: Date(),
+        rocketId: "Falcon9",
+        youtubeId: "youtubeId"
+      )
+    )
+
+    return NavigationView {
       MainView()
-        .environmentObject(AppState())
+        .environmentObject(appState)
     }
   }
 }

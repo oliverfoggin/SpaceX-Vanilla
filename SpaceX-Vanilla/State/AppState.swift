@@ -90,6 +90,10 @@ class AppState: ObservableObject {
   func selectLaunch(launch: Launch) {
     route = .launchActionSheet(launch: launch)
   }
+
+  func setFilterNavigation(isActive: Bool) {
+    route = isActive ? .filter : nil
+  }
 }
 
 extension AppState {
