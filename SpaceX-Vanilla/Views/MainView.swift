@@ -3,46 +3,30 @@ import Combine
 import CasePaths
 
 struct MainView: View {
-  @EnvironmentObject var appState: AppState
+  @ObservedObject var viewModel: MainViewModel
+
+  init(viewModel: MainViewModel) {
+    self.viewModel = viewModel
+  }
 
   var body: some View {
     ScrollView {
       LazyVStack {
-        if case let .success(company) = appState.company {
-          CompanyView(companyViewModel: CompanyViewModel(company: company))
-        } else {
-          EmptyView()
-        }
-        MainLaunchView()
+        CompanyView(companyViewModel: CompanyViewModel(company: viewModel.company))
+        LaunchListView(launches: viewModel.launches, onTap: viewModel.launchViewModelTapped(launchViewModel:))
       }
     }
     .confirmationDialog(
       title: { _ in Text("Which info would you like to see?") },
       titleVisibility: .visible,
-      unwrap: $appState.route,
-      case: /AppState.Route.launchActionSheet(launch:),
+      unwrap: $viewModel.route,
+      case: /MainViewModel.Route.launchActionSheet(launch:),
       actions: { launch in
-        if let wiki = launch.wikipediaURL {
-          Button {
-            UIApplication.shared.open(wiki)
-          } label: {
-            Text("Wikipedia")
-          }
-        }
-        if let youtubeId = launch.youtubeId {
-          Button {
-            let url = URL(string: "http://www.youtube.com/watch?v=\(youtubeId)")!
-            UIApplication.shared.open(url)
-          } label: {
-            Text("YouTube")
-          }
-        }
-        if let article = launch.articleURL {
-          Button {
-            UIApplication.shared.open(article)
-          } label: {
-            Text("Article")
-          }
+        launch.actionButtons
+
+        Button(role: .cancel) {
+        } label: {
+          Text("Cancel")
         }
       },
       message: { _ in EmptyView() }
@@ -51,9 +35,9 @@ struct MainView: View {
     .toolbar {
       ToolbarItem {
         NavigationLink(
-          unwrap: $appState.route,
-          case: /AppState.Route.filter,
-          onNavigate: appState.setFilterNavigation(isActive:),
+          unwrap: $viewModel.route,
+          case: /MainViewModel.Route.filter,
+          onNavigate: viewModel.setFilterNavigation(isActive:),
           destination: { _ in Text("Filter") },
           label: {
             Image(systemName: "line.horizontal.3.decrease.circle")
@@ -90,22 +74,69 @@ struct HeaderView: View {
   }
 }
 
+extension Launch {
+  @ViewBuilder var actionButtons: some View {
+    if let wiki = wikipediaURL {
+      Button {
+        UIApplication.shared.open(wiki)
+      } label: {
+        Text("Wikipedia")
+      }
+    }
+    if let youtubeId = youtubeId {
+      Button {
+        let url = URL(string: "http://www.youtube.com/watch?v=\(youtubeId)")!
+        UIApplication.shared.open(url)
+      } label: {
+        Text("YouTube")
+      }
+    }
+    if let article = articleURL {
+      Button {
+        UIApplication.shared.open(article)
+      } label: {
+        Text("Article")
+      }
+    }
+  }
+}
+
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    let appState = AppState()
-    appState.route = .launchActionSheet(
-      launch: Launch(
-        id: "blah",
-        missionName: "blha",
-        launchDate: Date(),
-        rocketId: "Falcon9",
-        youtubeId: "youtubeId"
-      )
+    let launch = Launch(
+      id: "blah",
+      missionName: "Blah",
+      launchDate: Date(),
+      rocketId: "abc",
+      youtubeId: "youtubeId"
+    )
+
+    let company = Company(
+      name: "Bob",
+      founder: "Oliver",
+      founded: 1,
+      employees: 9999,
+      launchSites: 123,
+      valuation: 42
+    )
+
+    let rocket = Rocket(id: "abc", name: "Elon", type: "BFR")
+
+    let launchViewModel = LaunchViewModel(
+      launch: launch,
+      rocket: rocket,
+      now: Date(),
+      calendar: .current
+    )
+
+    let viewModel = MainViewModel(
+      company: company,
+      launches: [launchViewModel],
+      route: .launchActionSheet(launch: launch)
     )
 
     return NavigationView {
-      MainView()
-        .environmentObject(appState)
+      MainView(viewModel: viewModel)
     }
   }
 }

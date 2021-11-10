@@ -1,41 +1,15 @@
 import SwiftUI
 
-struct MainLaunchView: View {
-  @EnvironmentObject var appState: AppState
-
-  var body: some View {
-    switch (appState.launches, appState.rockets) {
-    case (.notRequested, _):
-      Text("Not requested")
-        .onAppear {
-          appState.launchRequest.send()
-          appState.rocketRequest.send()
-        }
-    case (.fetching, _):
-      Text("Fetching")
-    case (.success, .success):
-      LaunchListView(
-        launches: appState.compiledLaunchViewModels,
-        onTap: appState.selectLaunch(launch:)
-      )
-    case let (.error(error), _):
-      Text(error.localizedDescription)
-    default:
-      Text("Something")
-    }
-  }
-}
-
 struct LaunchListView: View {
   let launches: [LaunchViewModel]
-  let onTap: (Launch) -> Void
+  let onTap: (LaunchViewModel) -> Void
 
   var body: some View {
     Section(header: HeaderView(title: "LAUNCHES")) {
       ForEach(launches) { launch in
         VStack {
           LaunchView(viewModel: launch)
-            .onTapGesture { onTap(launch.launch) }
+            .onTapGesture { onTap(launch) }
           Divider()
         }
       }
@@ -69,9 +43,6 @@ struct LaunchView: View {
     }
     .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-//    .onTapGesture {
-//      viewModel.send(.launchTapped(launch: viewModel.launch))
-//    }
   }
 }
 

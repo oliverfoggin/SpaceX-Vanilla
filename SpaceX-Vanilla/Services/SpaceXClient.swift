@@ -42,6 +42,12 @@ struct SpaceXLive: SpaceXClient {
       .mapError { e in ClientError(message: e.localizedDescription) }
       .eraseToAnyPublisher()
   }
+
+  let jsonDecoder: JSONDecoder = {
+    let d = JSONDecoder()
+    d.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+    return d
+  }()
 }
 
 // MARK: - Private helpers
@@ -56,9 +62,3 @@ private extension DateFormatter {
     return formatter
   }()
 }
-
-private let jsonDecoder: JSONDecoder = {
-  let d = JSONDecoder()
-  d.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
-  return d
-}()

@@ -18,7 +18,6 @@
 		F6D38CE12736D052009DD72A /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE02736D052009DD72A /* Rocket.swift */; };
 		F6D38CE32736D06F009DD72A /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE22736D06F009DD72A /* Launch.swift */; };
 		F6D38CE52736D0D1009DD72A /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE42736D0D1009DD72A /* Company.swift */; };
-		F6D38CE82736D244009DD72A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CE72736D244009DD72A /* AppState.swift */; };
 		F6D38CEB2736D6F2009DD72A /* CompanyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CEA2736D6F2009DD72A /* CompanyViewModel.swift */; };
 		F6D38CEE2736E34E009DD72A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CED2736E34E009DD72A /* MainView.swift */; };
 		F6D38CF02736EC02009DD72A /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38CEF2736EC02009DD72A /* LaunchesView.swift */; };
@@ -30,6 +29,10 @@
 		F6D38D0127371CF5009DD72A /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38D0027371CF5009DD72A /* RemoteImage.swift */; };
 		F6D38D032737212F009DD72A /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D38D022737212F009DD72A /* Navigation.swift */; };
 		F6D38D06273725BC009DD72A /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = F6D38D05273725BC009DD72A /* CasePaths */; };
+		F6E0E699273C704B0000670C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0E698273C704B0000670C /* DataStore.swift */; };
+		F6E0E69B273C85810000670C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0E69A273C85810000670C /* AppViewModel.swift */; };
+		F6E0E69D273C85B50000670C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0E69C273C85B50000670C /* State.swift */; };
+		F6E0E69F273C85CC0000670C /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0E69E273C85CC0000670C /* Remote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,6 @@
 		F6D38CE02736D052009DD72A /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		F6D38CE22736D06F009DD72A /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		F6D38CE42736D0D1009DD72A /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		F6D38CE72736D244009DD72A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F6D38CEA2736D6F2009DD72A /* CompanyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewModel.swift; sourceTree = "<group>"; };
 		F6D38CED2736E34E009DD72A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F6D38CEF2736EC02009DD72A /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,10 @@
 		F6D38CFC273711BF009DD72A /* ImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
 		F6D38D0027371CF5009DD72A /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		F6D38D022737212F009DD72A /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		F6E0E698273C704B0000670C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		F6E0E69A273C85810000670C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		F6E0E69C273C85B50000670C /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		F6E0E69E273C85CC0000670C /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +132,10 @@
 		F6D38CB12736C643009DD72A /* SpaceX-Vanilla */ = {
 			isa = PBXGroup;
 			children = (
+				F6E0E697273C70330000670C /* Data */,
 				F6D38CF5273708DA009DD72A /* Extensions */,
 				F6D38CEC2736D7D2009DD72A /* Views */,
 				F6D38CE92736D6E4009DD72A /* ViewModels */,
-				F6D38CE62736D236009DD72A /* State */,
-				F6D38CDF2736D04A009DD72A /* Models */,
 				F6D38CDC2736CFB9009DD72A /* Services */,
 				F6D38CB22736C643009DD72A /* SpaceX_VanillaApp.swift */,
 				F6D38CB62736C646009DD72A /* Assets.xcassets */,
@@ -183,20 +188,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F6D38CE62736D236009DD72A /* State */ = {
-			isa = PBXGroup;
-			children = (
-				F6D38CE72736D244009DD72A /* AppState.swift */,
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
 		F6D38CE92736D6E4009DD72A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				F6D38CEA2736D6F2009DD72A /* CompanyViewModel.swift */,
 				F6D38CF12736FD4A009DD72A /* MainViewModel.swift */,
 				F6D38CFA27370E36009DD72A /* LaunchViewModel.swift */,
+				F6E0E69A273C85810000670C /* AppViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,6 +218,17 @@
 				F6D38D022737212F009DD72A /* Navigation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6E0E697273C70330000670C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F6D38CDF2736D04A009DD72A /* Models */,
+				F6E0E698273C704B0000670C /* DataStore.swift */,
+				F6E0E69C273C85B50000670C /* State.swift */,
+				F6E0E69E273C85CC0000670C /* Remote.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,13 +369,16 @@
 			files = (
 				F6D38CB52736C643009DD72A /* AppView.swift in Sources */,
 				F6D38CEE2736E34E009DD72A /* MainView.swift in Sources */,
+				F6E0E69B273C85810000670C /* AppViewModel.swift in Sources */,
 				F6D38CF7273708E5009DD72A /* Sequence.swift in Sources */,
 				F6D38CFD273711BF009DD72A /* ImageClient.swift in Sources */,
 				F6D38CDE2736CFEE009DD72A /* SpaceXClient.swift in Sources */,
 				F6D38CF02736EC02009DD72A /* LaunchesView.swift in Sources */,
-				F6D38CE82736D244009DD72A /* AppState.swift in Sources */,
+				F6E0E699273C704B0000670C /* DataStore.swift in Sources */,
 				F6D38CB32736C643009DD72A /* SpaceX_VanillaApp.swift in Sources */,
 				F6D38D032737212F009DD72A /* Navigation.swift in Sources */,
+				F6E0E69D273C85B50000670C /* State.swift in Sources */,
+				F6E0E69F273C85CC0000670C /* Remote.swift in Sources */,
 				F6D38CEB2736D6F2009DD72A /* CompanyViewModel.swift in Sources */,
 				F6D38CE32736D06F009DD72A /* Launch.swift in Sources */,
 				F6D38CFB27370E36009DD72A /* LaunchViewModel.swift in Sources */,
